@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Mail, Linkedin, ArrowDown, ChevronRight } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { personal } from '../data/portfolio';
+import avatarUrl from '../assets/avatar.png';
 
 function AvatarSVG() {
   return (
@@ -272,8 +273,11 @@ export default function Hero() {
               {/* Glowing background */}
               <div className="absolute inset-4 rounded-full bg-gradient-to-br from-accent-cobalt/10 to-accent-mint/5 blur-sm" />
               {/* Avatar */}
-              <div className="absolute inset-4">
+              {/* <div className="absolute inset-4">
                 <AvatarSVG />
+              </div> */}
+              <div className="absolute inset-4">
+                <img src={avatarUrl} alt="Avatar" className="w-full h-full" />
               </div>
 
               {/* Floating tech badges */}
