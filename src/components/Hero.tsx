@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Mail, Linkedin, ArrowDown, ChevronRight } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { personal } from '../data/portfolio';
-import avatarUrl from '../assets/avatar.png';
+import avatarUrl from '../assets/avatar2.png';
 
 function AvatarSVG() {
   return (
