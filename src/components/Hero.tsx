@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Mail, Linkedin, ArrowDown, ChevronRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowDown, ChevronRight, Download } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { personal } from '../data/portfolio';
 import avatarUrl from '../assets/avatar2.png';
@@ -242,6 +242,14 @@ export default function Hero() {
               >
                 <Mail size={16} />
                 Get in Touch
+              </a>
+              <a
+                href="/assets/Faizan_Khan_Resume.docx"
+                download
+                className="btn-outline"
+              >
+                <Download size={16} />
+                Download Resume
               </a>
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}

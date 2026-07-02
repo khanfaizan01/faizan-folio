@@ -1,4 +1,4 @@
-import { Mail, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Download } from 'lucide-react';
 import { useScrollRevealAll } from '../hooks/useScrollReveal';
 import { personal } from '../data/portfolio';
 
@@ -45,7 +45,20 @@ export default function Contact() {
           </div>
 
           {/* Contact cards */}
-          <div className="reveal grid sm:grid-cols-2 gap-4 mb-8">
+          <div className="reveal grid sm:grid-cols-3 gap-4 mb-8">
+            <a
+              href="/assets/Faizan_Khan_Resume.docx"
+              download
+              className="flex items-center gap-4 p-5 rounded-2xl bg-bg-card border border-border-subtle hover:border-accent-mint/50 hover:shadow-glow-mint group transition-all duration-300"
+            >
+              <div className="w-12 h-12 rounded-xl bg-accent-mintGlow border border-accent-mint/30 flex items-center justify-center text-accent-mint group-hover:shadow-glow-mint transition-all duration-300">
+                <Download size={22} />
+              </div>
+              <div className="text-left">
+                <p className="text-text-muted text-xs uppercase tracking-wider mb-0.5">Resume</p>
+                <p className="text-text-primary text-sm font-medium">Download CV</p>
+              </div>
+            </a>
             <a
               href={`mailto:${personal.email}`}
               className="flex items-center gap-4 p-5 rounded-2xl bg-bg-card border border-border-subtle hover:border-accent-cobalt/50 hover:shadow-glow-cobalt group transition-all duration-300"
@@ -101,6 +114,14 @@ export default function Contact() {
             >
               <Mail size={16} />
               Send an Email
+            </a>
+            <a
+              href="/assets/Faizan_Khan_Resume.docx"
+              download
+              className="btn-outline"
+            >
+              <Download size={16} />
+              Download Resume
             </a>
           </div>
         </div>
